@@ -233,7 +233,7 @@ const extractImports = (content: string, filePath: string): Array<string> => {
     /import\s+(?:{[^}]+}|\*\s+as\s+\w+|\w+)\s+from\s+['"]([^'"\n]+)['"]/g,
     /require\s*\(\s*['"]([^'"\n]+)['"]\s*\)/g,
     /import\s*\(\s*['"]([^'"\n]+)['"]\s*\)/g, // Dynamic imports
-    /import\s+([\w\.\*]+)/g, //simple imports
+    /import\s+([\w\.\*]+)/g, // Static imports
   ];
   const imports: Array<string> = [];
   for (const pattern of importPatterns) {
